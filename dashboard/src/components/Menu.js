@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-
 import { Link } from "react-router-dom";
+import Cookies from "js-cookie";
 
 const Menu = () => {
   const [selectedMenu, setSelectedMenu] = useState(0);
@@ -10,86 +10,71 @@ const Menu = () => {
     setSelectedMenu(index);
   };
 
-  const handleProfileClick = (index) => {
+  const handleProfileClick = () => {
     setIsProfileDropdownOpen(!isProfileDropdownOpen);
   };
 
   const menuClass = "menu";
   const activeMenuClass = "menu selected";
 
+  // Logout function
+  const handleLogout = () => {
+    localStorage.removeItem("token");
+    Cookies.remove("token");
+    window.location.href = "/";
+  };
+
+  // Go to frontend home
+  const goToFrontend = () => {
+    window.location.href = "http://localhost:3002";
+  };
+
   return (
     <div className="menu-container">
-      <img src="logo.png" style={{ width: "50px" }} />
+      <img src="logo.png" alt="Logo" style={{ width: "50px", margin: "20px auto", display: "block" }} />
+
       <div className="menus">
         <ul>
           <li>
-            <Link
-              style={{ textDecoration: "none" }}
-              to="/"
-              onClick={() => handleMenuClick(0)}
-            >
-              <p className={selectedMenu === 0 ? activeMenuClass : menuClass}>
-                Dashboard
-              </p>
+            <Link to="/" onClick={() => handleMenuClick(0)} style={{ textDecoration: "none" }}>
+              <p className={selectedMenu === 0 ? activeMenuClass : menuClass}>Dashboard</p>
             </Link>
           </li>
           <li>
-            <Link
-              style={{ textDecoration: "none" }}
-              to="/orders"
-              onClick={() => handleMenuClick(1)}
-            >
-              <p className={selectedMenu === 1 ? activeMenuClass : menuClass}>
-                Orders
-              </p>
+            <Link to="/orders" onClick={() => handleMenuClick(1)} style={{ textDecoration: "none" }}>
+              <p className={selectedMenu === 1 ? activeMenuClass : menuClass}>Orders</p>
             </Link>
           </li>
           <li>
-            <Link
-              style={{ textDecoration: "none" }}
-              to="/holdings"
-              onClick={() => handleMenuClick(2)}
-            >
-              <p className={selectedMenu === 2 ? activeMenuClass : menuClass}>
-                Holdings
-              </p>
+            <Link to="/holdings" onClick={() => handleMenuClick(2)} style={{ textDecoration: "none" }}>
+              <p className={selectedMenu === 2 ? activeMenuClass : menuClass}>Holdings</p>
             </Link>
           </li>
           <li>
-            <Link
-              style={{ textDecoration: "none" }}
-              to="/positions"
-              onClick={() => handleMenuClick(3)}
-            >
-              <p className={selectedMenu === 3 ? activeMenuClass : menuClass}>
-                Positions
-              </p>
+            <Link to="/positions" onClick={() => handleMenuClick(3)} style={{ textDecoration: "none" }}>
+              <p className={selectedMenu === 3 ? activeMenuClass : menuClass}>Positions</p>
             </Link>
           </li>
           <li>
-            <Link
-              style={{ textDecoration: "none" }}
-              to="/funds"
-              onClick={() => handleMenuClick(4)}
-            >
-              <p className={selectedMenu === 4 ? activeMenuClass : menuClass}>
-                Funds
-              </p>
+            <Link to="/funds" onClick={() => handleMenuClick(4)} style={{ textDecoration: "none" }}>
+              <p className={selectedMenu === 4 ? activeMenuClass : menuClass}>Funds</p>
             </Link>
+          </li>
+             <li>
+            <p onClick={goToFrontend} className={menuClass} style={{ cursor: "pointer" }}>
+              Exit Dashboard
+            </p>
           </li>
           <li>
-            <Link
-              style={{ textDecoration: "none" }}
-              to="/apps"
-              onClick={() => handleMenuClick(6)}
-            >
-              <p className={selectedMenu === 6 ? activeMenuClass : menuClass}>
-                Apps
-              </p>
-            </Link>
+            <p onClick={handleLogout} className={menuClass} style={{ cursor: "pointer" }}>
+              Logout
+            </p>
           </li>
+       
         </ul>
-        <hr />
+
+        <hr style={{ margin: "20px 0" }} />
+
         <div className="profile" onClick={handleProfileClick}>
           <div className="avatar">ZU</div>
           <p className="username">USERID</p>

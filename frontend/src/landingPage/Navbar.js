@@ -1,26 +1,25 @@
 import React, { useEffect, useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
-import { useCookies } from "react-cookie";
+import { Link, useNavigate, useLocation } from "react-router-dom";
 
 function Navbar() {
-  const [cookies, setCookie, removeCookie] = useCookies(["token"]);
-  const [isLogged, setIsLogged] = useState(!!cookies.token);
+  const [isLogged, setIsLogged] = useState(false);
   const navigate = useNavigate();
+  const location = useLocation();
 
   useEffect(() => {
-    // Debug: check current cookies
-    console.log("Cookies:", cookies);
-    setIsLogged(!!cookies.token);
-  }, [cookies]);
+    const token = localStorage.getItem("token");
+    setIsLogged(!!token);
+    console.log("token from localStorage:", token);
+  }, [location.pathname]);
 
   const handleLogout = () => {
-    removeCookie("token", { path: "/" }); // important: match path used during set
+    localStorage.removeItem("token");
     setIsLogged(false);
     navigate("/login");
   };
 
   return (
-    <nav className="navbar navbar-expand-lg bg-body-tertiary fixed-top ">
+    <nav className="navbar navbar-expand-lg bg-body-tertiary fixed-top">
       <div className="container px-5 py-2 border-bottom">
         <Link className="navbar-brand" to={"/"}>
           <img
@@ -45,37 +44,25 @@ function Navbar() {
           <form className="d-flex" role="search">
             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
               <li className="nav-item">
-                <Link className="nav-link active text-muted" to={"/about"}>
-                  About
-                </Link>
+                <Link className="nav-link active text-muted" to="/about">About</Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link active text-muted" to={"/product"}>
-                  Product
-                </Link>
+                <Link className="nav-link active text-muted" to="/product">Product</Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link active text-muted" to={"/pricing"}>
-                  Pricing
-                </Link>
+                <Link className="nav-link active text-muted" to="/pricing">Pricing</Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link active text-muted" to={"/support"}>
-                  Support
-                </Link>
+                <Link className="nav-link active text-muted" to="/support">Support</Link>
               </li>
 
               {!isLogged ? (
                 <>
                   <li className="nav-item">
-                    <Link className="nav-link active text-muted" to={"/signup"}>
-                      Signup
-                    </Link>
+                    <Link className="nav-link active text-muted" to="/signup">Signup</Link>
                   </li>
                   <li className="nav-item">
-                    <Link className="nav-link active text-muted" to={"/login"}>
-                      Login
-                    </Link>
+                    <Link className="nav-link active text-muted" to="/login">Login</Link>
                   </li>
                 </>
               ) : (

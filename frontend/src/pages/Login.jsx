@@ -1,12 +1,9 @@
 import React, { useState } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import axios from 'axios';
 import { ToastContainer, toast } from 'react-toastify';
-import { useCookies } from 'react-cookie'; 
 
 const Login = () => {
-  const navigate = useNavigate();
-  const [cookies, setCookie] = useCookies(["token"]); 
   const [inputValue, setInputValue] = useState({
     email: "",
     password: ""
@@ -16,10 +13,7 @@ const Login = () => {
 
   const handleOnChange = (e) => {
     const { name, value } = e.target;
-    setInputValue({
-      ...inputValue,
-      [name]: value,
-    });
+    setInputValue({ ...inputValue, [name]: value });
   };
 
   const handleError = (err) => {
@@ -43,19 +37,10 @@ const Login = () => {
 
       if (success) {
         handleSuccess(message);
-
         if (token) {
-          setCookie("token", token, {
-            path: "/",      
-            maxAge: 3600,   
-          });
+          localStorage.setItem("token", token);
+          window.location.href = "http://localhost:3000"; 
         }
-
-      if (token) {
-  window.location.href = `http://localhost:3000?token=${token}`;
-}
-
-
       } else {
         handleError(message);
       }
@@ -64,10 +49,7 @@ const Login = () => {
       handleError("Login failed. Try again.");
     }
 
-    setInputValue({
-      email: "",
-      password: ""
-    });
+    setInputValue({ email: "", password: "" });
   };
 
   return (
@@ -77,15 +59,29 @@ const Login = () => {
         <form onSubmit={handleSubmit}>
           <div>
             <label htmlFor='email'>Email:</label>
-            <input type='email' id='email' name='email' value={email} placeholder='Enter email' onChange={handleOnChange} />
+            <input
+              type='email'
+              id='email'
+              name='email'
+              value={email}
+              placeholder='Enter email'
+              onChange={handleOnChange}
+            />
           </div>
           <div>
             <label htmlFor='password'>Password:</label>
-            <input type='password' id='password' name='password' value={password} placeholder='Enter password' onChange={handleOnChange} />
+            <input
+              type='password'
+              id='password'
+              name='password'
+              value={password}
+              placeholder='Enter password'
+              onChange={handleOnChange}
+            />
           </div>
           <div>
             <button type='submit' className='bg-primary'>Submit</button>
-            <span className='mt-3'> New user? <Link to={"/signup"} className='text-primary'>Signup</Link></span>
+            <span className='mt-3'> New user? <Link to="/signup" className='text-primary'>Signup</Link></span>
           </div>
         </form>
         <ToastContainer />
