@@ -37,10 +37,11 @@ const Login = () => {
 
       if (success) {
         handleSuccess(message);
-        if (token) {
-          localStorage.setItem("token", token);
-          window.location.href = "http://localhost:3000"; 
-        }
+       if (token) {
+          localStorage.setItem("token", token); 
+          window.location.href = `http://localhost:3000?token=${token}`; 
+}
+
       } else {
         handleError(message);
       }

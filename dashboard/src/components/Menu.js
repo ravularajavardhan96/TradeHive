@@ -18,10 +18,10 @@ const Menu = () => {
   const activeMenuClass = "menu selected";
 
   // Logout function
-  const handleLogout = () => {
-    localStorage.removeItem("token");
-    Cookies.remove("token");
-    window.location.href = "/";
+  const handleLogout =async () => {
+    await localStorage.removeItem("token");
+    await Cookies.remove("token");
+    window.location.href = "http://localhost:3002";
   };
 
   // Go to frontend home
@@ -65,11 +65,11 @@ const Menu = () => {
               Exit Dashboard
             </p>
           </li>
-          <li>
+          {/* <li>
             <p onClick={handleLogout} className={menuClass} style={{ cursor: "pointer" }}>
               Logout
             </p>
-          </li>
+          </li> */}
        
         </ul>
 

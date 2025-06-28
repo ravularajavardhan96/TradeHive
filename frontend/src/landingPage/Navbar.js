@@ -9,17 +9,16 @@ function Navbar() {
   useEffect(() => {
     const token = localStorage.getItem("token");
     setIsLogged(!!token);
-    console.log("token from localStorage:", token);
-  }, [location.pathname]);
+  }, [location]); 
 
   const handleLogout = () => {
-    localStorage.removeItem("token");
-    setIsLogged(false);
-    navigate("/login");
+    localStorage.removeItem("token"); 
+    setIsLogged(false);              
+    navigate("/");              
   };
 
   return (
-    <nav className="navbar navbar-expand-lg bg-body-tertiary fixed-top">
+    <nav className="navbar navbar-expand-lg bg-body-tertiary fixed-top ">
       <div className="container px-5 py-2 border-bottom">
         <Link className="navbar-brand" to={"/"}>
           <img
@@ -34,49 +33,52 @@ function Navbar() {
           type="button"
           data-bs-toggle="collapse"
           data-bs-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
         >
           <span className="navbar-toggler-icon"></span>
         </button>
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
-          <form className="d-flex" role="search">
-            <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-              <li className="nav-item">
-                <Link className="nav-link active text-muted" to="/about">About</Link>
-              </li>
-              <li className="nav-item">
-                <Link className="nav-link active text-muted" to="/product">Product</Link>
-              </li>
-              <li className="nav-item">
-                <Link className="nav-link active text-muted" to="/pricing">Pricing</Link>
-              </li>
-              <li className="nav-item">
-                <Link className="nav-link active text-muted" to="/support">Support</Link>
-              </li>
-
-              {!isLogged ? (
-                <>
-                  <li className="nav-item">
-                    <Link className="nav-link active text-muted" to="/signup">Signup</Link>
-                  </li>
-                  <li className="nav-item">
-                    <Link className="nav-link active text-muted" to="/login">Login</Link>
-                  </li>
-                </>
-              ) : (
+          <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li className="nav-item">
+              <Link className="nav-link text-muted" to="/about">About</Link>
+            </li>
+            <li className="nav-item">
+              <Link className="nav-link text-muted" to="/product">Product</Link>
+            </li>
+            <li className="nav-item">
+              <Link className="nav-link text-muted" to="/pricing">Pricing</Link>
+            </li>
+            <li className="nav-item">
+              <Link className="nav-link text-muted" to="/support">Support</Link>
+            </li>
+            {!isLogged ? (
+              <>
                 <li className="nav-item">
-                  <button
-                    className="nav-link active text-muted btn"
-                    onClick={handleLogout}
+                  <Link className="nav-link text-muted" to="/signup">Signup</Link>
+                </li>
+                <li className="nav-item">
+                  <Link className="nav-link text-muted" to="/login">Login</Link>
+                </li>
+              </>
+            ) : (
+              <>
+                <li className="nav-item">
+                  <a
+                    className="nav-link text-muted"
+                    href="http://localhost:3000"
+                    target="_blank"
+                    rel="noopener noreferrer"
                   >
+                    Dashboard
+                  </a>
+                </li>
+                <li className="nav-item">
+                  <button className="nav-link btn text-muted" onClick={handleLogout}>
                     Logout
                   </button>
                 </li>
-              )}
-            </ul>
-          </form>
+              </>
+            )}
+          </ul>
         </div>
       </div>
     </nav>

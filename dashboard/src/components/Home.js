@@ -20,10 +20,11 @@ const Home = () => {
 
     const verifyToken = async () => {
       const token = localStorage.getItem("token");
-      console.log("Stored token:", token); // ✅ Helpful for debugging
+      console.log("Stored token:", token); 
 
       if (!token) {
-        window.location.href = "http://localhost:3002";
+        window.location.href = "http://localhost:300";
+        
         return;
       }
 
@@ -33,7 +34,7 @@ const Home = () => {
           headers: {
             Authorization: `Bearer ${token}`,
           },
-          credentials: "include", // Optional but good if you're using cookies
+          credentials: "include",
         });
 
         const data = await res.json();
