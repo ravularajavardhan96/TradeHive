@@ -1,11 +1,9 @@
-# Ignore all node_modules in any subdirectory
+# .gitignore
+# Ignore node_modules everywhere
 **/node_modules/
 
-# Ignore all .env files in any subdirectory
+# Ignore .env files everywhere
 **/.env
 
-# Optional ignores
-*.log
-.env.local
-dist/
-build/
+# Ignore cache files
+**/.cache/
