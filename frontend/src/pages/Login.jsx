@@ -51,9 +51,11 @@ const Login = () => {
           });
         }
 
-        setTimeout(() => {
-          navigate("/");
-        }, 1000);
+      if (token) {
+  window.location.href = `http://localhost:3000?token=${token}`;
+}
+
+
       } else {
         handleError(message);
       }

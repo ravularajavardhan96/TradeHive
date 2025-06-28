@@ -9,6 +9,8 @@ import WatchList from "./components/WatchList";
 import Funds from "./components/Funds";
 
 const DashboardHome = () => {
+  
+  
   return (
     <div>
       <TopBar />

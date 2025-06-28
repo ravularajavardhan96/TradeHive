@@ -17,9 +17,10 @@ const PORT = process.env.PORT || 3001;
 
 // Middlewares
 app.use(cors({
-  origin: "http://localhost:3000", // your frontend/dashboard
+  origin: /^http:\/\/localhost:\d+$/,  // matches localhost on any port
   credentials: true
 }));
+
 app.use(cookieParser());
 app.use(bodyParser.json());
 app.use(express.json());
