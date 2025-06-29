@@ -65,7 +65,6 @@ function Navbar() {
                   <a
                     className="nav-link text-muted"
                     href="https://dashboard-zerodhaclone.netlify.app"
-                    target="_blank"
                     rel="noopener noreferrer"
                   >
                     Dashboard
