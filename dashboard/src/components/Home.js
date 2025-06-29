@@ -23,7 +23,7 @@ const Home = () => {
       console.log("Stored token:", token); 
 
       if (!token) {
-        window.location.href = "http://localhost:300";
+        window.location.href = "https://frontend-zerodha.netlify.app";
         
         return;
       }
@@ -43,11 +43,11 @@ const Home = () => {
         if (res.status === 200) {
           setIsVerified(true);
         } else {
-          window.location.href = "http://localhost:3002";
+          window.location.href = "https://frontend-zerodha.netlify.app";
         }
       } catch (err) {
         console.error("Verification failed:", err);
-        window.location.href = "http://localhost:3002";
+        window.location.href = "https://frontend-zerodha.netlify.app";
       }
     };
 

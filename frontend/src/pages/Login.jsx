@@ -39,7 +39,7 @@ const Login = () => {
         handleSuccess(message);
        if (token) {
           localStorage.setItem("token", token); 
-          window.location.href = `http://localhost:3000?token=${token}`; 
+          window.location.href = `dashboard-zerodhaclone.netlify.app?token=${token}`; 
 }
 
       } else {

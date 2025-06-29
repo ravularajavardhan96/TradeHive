@@ -21,12 +21,12 @@ const Menu = () => {
   const handleLogout =async () => {
     await localStorage.removeItem("token");
     await Cookies.remove("token");
-    window.location.href = "http://localhost:3002";
+    window.location.href = "https://frontend-zerodha.netlify.app";
   };
 
   // Go to frontend home
   const goToFrontend = () => {
-    window.location.href = "http://localhost:3002";
+    window.location.href = "https://frontend-zerodha.netlify.app";
   };
 
   return (
