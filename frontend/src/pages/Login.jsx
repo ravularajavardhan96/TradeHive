@@ -34,6 +34,8 @@ const Login = () => {
       );
 
       const { success, message, token } = data;
+      console.log("Force redeploy");
+
 
       if (success) {
         handleSuccess(message);
