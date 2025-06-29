@@ -15,7 +15,7 @@ const Home = () => {
     if (tokenFromUrl) {
       localStorage.setItem("token", tokenFromUrl);
       // ✅ Clean the URL after saving token
-      window.history.replaceState(null, null, window.location.pathname);
+      window.history.replaceState(null, null,"/");
     }
 
     const verifyToken = async () => {
