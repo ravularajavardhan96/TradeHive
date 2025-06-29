@@ -10,7 +10,7 @@ const App = () => {
   useEffect(() => {
     const verifyToken = async () => {
       try {
-        const { data } = await axios.get("http://localhost:3001/verify", {
+        const { data } = await axios.get("https://backend-zerodha-soz4.onrender.com/verify", {
           withCredentials: true,
         });
 
