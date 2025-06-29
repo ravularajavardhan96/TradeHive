@@ -64,7 +64,7 @@ function Navbar() {
                 <li className="nav-item">
                   <a
                     className="nav-link text-muted"
-                    href="http://localhost:3000"
+                    href="dashboard-zerodhaclone.netlify.app"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
