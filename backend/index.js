@@ -17,7 +17,7 @@ const PORT = process.env.PORT || 3001;
 
 // Middlewares
 app.use(cors({
-  origin: ["https://frontend-zerodha.netlify.app","dashboard-zerodhaclone.netlify.app"],
+  origin: ["https://frontend-zerodha.netlify.app","https://dashboard-zerodhaclone.netlify.app"],
   credentials: true
 }));
 
