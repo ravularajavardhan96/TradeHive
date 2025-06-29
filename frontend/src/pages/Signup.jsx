@@ -32,7 +32,7 @@ const Signup =  () =>{
     const handleSubmit =async(e)=>{
         e.preventDefault();
         try{
-            const {data} =await axios.post("http://localhost:3001/signup",{...inputValue},{withCredentials:true});
+            const {data} =await axios.post("https://backend-zerodha-soz4.onrender.com/signup",{...inputValue},{withCredentials:true});
             const {success,message} =data;
             if(success){
                 handleSuccess(message);

@@ -29,7 +29,7 @@ const Home = () => {
       }
 
       try {
-        const res = await fetch("http://localhost:3001/verify", {
+        const res = await fetch("https://backend-zerodha-soz4.onrender.com/verify", {
           method: "POST",
           headers: {
             Authorization: `Bearer ${token}`,

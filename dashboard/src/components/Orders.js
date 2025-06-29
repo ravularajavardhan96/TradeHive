@@ -6,7 +6,7 @@ import { useState } from "react";
 const Orders = () => {
 
   const [allOrders , setAllOrders] = useState([]);
-  useEffect( ()=>{axios.get("http://localhost:3001/getOrders").then((res)=>{
+  useEffect( ()=>{axios.get("https://backend-zerodha-soz4.onrender.com/getOrders").then((res)=>{
     setAllOrders(res.data);
  })},[]);
   return (
