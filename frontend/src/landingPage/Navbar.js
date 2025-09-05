@@ -22,7 +22,7 @@ function Navbar() {
       <div className="container px-5 border-bottom">
         <Link className="navbar-brand" to={"/"}>
           <img
-            src="assets/images-20250426T135433Z-001/images/logo1.svg"
+            src="assets/images-20250426T135433Z-001/images/logo.svg"
             style={{ width: "30%" }}
             className="ms-5"
             alt="logo"
