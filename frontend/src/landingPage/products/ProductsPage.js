@@ -24,7 +24,7 @@ function ProductsPage(){
         <RightSection 
             imageURL="assets\images-20250426T135433Z-001\images\console.png"
             prodTitle="Console"
-            prodDesp="The central dashboard for your Zerodha account. Gain insights into your trades and investments with in-depth reports and visualisations."
+            prodDesp="The central dashboard for your TradeHive account. Gain insights into your trades and investments with in-depth reports and visualisations."
             learnMore="#"
            />
 

@@ -28,11 +28,11 @@ app.use(express.json());
 // Connect to MongoDB
 mongoose.connect(uri)
   .then(() => {
-    console.log("✅ Connected to MongoDB");
-    app.listen(PORT, () => console.log(`🚀 Server running on port ${PORT}`));
+    console.log("Connected to MongoDB");
+    app.listen(PORT, () => console.log(` Server running on port ${PORT}`));
   })
   .catch((err) => {
-    console.error("❌ MongoDB connection error:", err);
+    console.error(" MongoDB connection error:", err);
   });
 
 // Auth Routes

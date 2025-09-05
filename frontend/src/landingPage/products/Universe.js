@@ -3,8 +3,8 @@ import {Link } from 'react-router-dom';
 function Universe(){
     return(
         <div className="container p-5">
-            <p className="fs-5 text-center d-block my-5 ">Want to know more about our technology stack? Check out the <a href="#" style={{textDecoration:"none"}}>Zerodha.tech</a> blog.</p>
-            <h1 className="text-center fs-2 text-muted " style={{marginTop:"7rem"}}>The Zerodha Universe</h1>
+            <p className="fs-5 text-center d-block my-5 ">Want to know more about our technology stack? Check out the <a href="#" style={{textDecoration:"none"}}>TradeHive.tech</a> blog.</p>
+            <h1 className="text-center fs-2 text-muted " style={{marginTop:"7rem"}}>The TradeHive Universe</h1>
             <p className=" text-center mt-4">Extend your trading and investment experience even further with our partner platforms</p>
             <div className="row mt-5 p-5 text-center ">
                 <div className="col">

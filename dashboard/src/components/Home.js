@@ -6,15 +6,15 @@ const Home = () => {
   const [isVerified, setIsVerified] = useState(false);
 
   useEffect(() => {
-    // ✅ Declare and use tokenFromUrl inside useEffect
+   
     const urlParams = new URLSearchParams(window.location.search);
     const tokenFromUrl = urlParams.get("token");
 
-    console.log("URL token:", tokenFromUrl); // ✅ Safe here
+    console.log("URL token:", tokenFromUrl);
 
     if (tokenFromUrl) {
       localStorage.setItem("token", tokenFromUrl);
-      // ✅ Clean the URL after saving token
+    
       window.history.replaceState(null, null,"/");
     }
 

@@ -17,7 +17,7 @@ function Brokerage(){
                 <p className="text-muted" style={{fontSize:"12px"}}>BSE has revised transaction charges in M, MT, TS and MS groups to ₹275 per crore of gross turnover.</p>
 
                 <p className="fs-6 fs-bold">Call & trade</p>
-                <p className="text-muted" style={{fontSize:"12px"}}>Additional charges of ₹50 per order for orders placed through a dealer at Zerodha including auto square off orders.</p>
+                <p className="text-muted" style={{fontSize:"12px"}}>Additional charges of ₹50 per order for orders placed through a dealer at TradeHive including auto square off orders.</p>
 
                 <p className="fs-6 fs-bold">Stamp charges</p>
                 <p className="text-muted" style={{fontSize:"12px"}}>Stamp charges by the Government of India as per the Indian Stamp Act of 1899 for transacting in instruments on the stock exchanges and depositories.</p>
@@ -60,7 +60,7 @@ function Brokerage(){
             <p className="text-muted" style={{fontSize:"12px"}}>Charged at ₹10 per crore + GST by Securities and Exchange Board of India for regulating the markets.</p>
 
             <p className=" fs-bold" >DP (Depository participant) charges</p>
-            <p className="text-muted" style={{fontSize:"12px"}}>₹15.34 per scrip (₹3.5 CDSL fee + ₹9.5 Zerodha fee + ₹2.34 GST) is charged on the trading account ledger when stocks are sold, irrespective of quantity.</p>
+            <p className="text-muted" style={{fontSize:"12px"}}>₹15.34 per scrip (₹3.5 CDSL fee + ₹9.5 TradeHive fee + ₹2.34 GST) is charged on the trading account ledger when stocks are sold, irrespective of quantity.</p>
             <p className="text-muted" style={{fontSize:"12px"}}>Female demat account holders (as first holder) will enjoy a discount of ₹0.25 per transaction on the CDSL fee.</p>
             <p className="text-muted" style={{fontSize:"12px"}}>Debit transactions of mutual funds & bonds get an additional discount of ₹0.25 on the CDSL fee.</p>
 

@@ -19,11 +19,11 @@ function Navbar() {
 
   return (
     <nav className="navbar navbar-expand-lg bg-body-tertiary fixed-top ">
-      <div className="container px-5 py-2 border-bottom">
+      <div className="container px-5 border-bottom">
         <Link className="navbar-brand" to={"/"}>
           <img
             src="assets/images-20250426T135433Z-001/images/logo.svg"
-            style={{ width: "20%" }}
+            style={{ width: "30%" }}
             className="ms-5"
             alt="logo"
           />

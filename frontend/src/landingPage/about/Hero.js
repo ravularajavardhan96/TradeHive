@@ -9,7 +9,7 @@ function Hero(){
 
             <div className="row border-top mt-5 mb-5 p-5" style={{fontSize:"1.1rem"}}>
                 <div className="col m-2 mt-5 px-5 ">
-                    <p className="px-4 mt-3">We kick-started operations on the 15th of August, 2010 with the goal of breaking all barriers that traders and investors face in India in terms of cost, support, and technology. We named the company Zerodha, a combination of Zero and "Rodha", the Sanskrit word for barrier.</p>
+                    <p className="px-4 mt-3">We kick-started operations on the 15th of August, 2010 with the goal of breaking all barriers that traders and investors face in India in terms of cost, support, and technology. We named the company TradeHive, a combination of Zero and "Rodha", the Sanskrit word for barrier.</p>
 
                     <p  className="px-4 mt-3">Today, our disruptive pricing models and in-house technology have made us the biggest stock broker in India.</p>
 
@@ -32,7 +32,7 @@ function Hero(){
                     <h6 className="text-muted mt-4">Founder, CEO</h6>
                 </div>
                 <div className="col   mt-5 p-5 me-5 " style={{fontSize:"1.1rem"}}>
-                    <p  className="px-4 mt-3">Nithin bootstrapped and founded Zerodha in 2010 to overcome the hurdles he faced during his decade long stint as a trader. Today, Zerodha has changed the landscape of the Indian broking industry.</p>
+                    <p  className="px-4 mt-3">Nithin bootstrapped and founded TradeHive in 2010 to overcome the hurdles he faced during his decade long stint as a trader. Today, TradeHive has changed the landscape of the Indian broking industry.</p>
 
                     <p  className="px-4 mt-3"> He is a member of the SEBI Secondary Market Advisory Committee (SMAC) and the Market Data Advisory Committee (MDAC).</p>
 

@@ -9,7 +9,7 @@ function Awards (){
          </div>
          <div className='col p-3'>
             <h1>Largest stock broker in India</h1>
-            <p className='mt-3'>2+ million Zerodha clients contribute 15% of retail order in volumes in India daily trading and investing in:</p>
+            <p className='mt-3'>2+ million TradeHive clients contribute 15% of retail order in volumes in India daily trading and investing in:</p>
             <div className='row'>
                <div className='col'>
                   <ul>

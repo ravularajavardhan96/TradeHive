@@ -17,14 +17,6 @@ const Menu = () => {
   const menuClass = "menu";
   const activeMenuClass = "menu selected";
 
-  // Logout function
-  const handleLogout =async () => {
-    await localStorage.removeItem("token");
-    await Cookies.remove("token");
-    window.location.href = "https://frontend-zerodha.netlify.app";
-  };
-
-  // Go to frontend home
   const goToFrontend = () => {
     window.location.href = "https://frontend-zerodha.netlify.app";
   };
@@ -65,11 +57,7 @@ const Menu = () => {
               Exit Dashboard
             </p>
           </li>
-          {/* <li>
-            <p onClick={handleLogout} className={menuClass} style={{ cursor: "pointer" }}>
-              Logout
-            </p>
-          </li> */}
+        
        
         </ul>
 

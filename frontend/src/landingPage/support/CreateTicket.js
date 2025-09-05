@@ -44,7 +44,7 @@ function CreateTicket(){
           </div>
 
           <div className="col text-start p-2">
-              <h5 className="mb-4"><i class="fa fa-user-circle-o" aria-hidden="true"></i> &nbsp;Your Zerodha Account</h5>
+              <h5 className="mb-4"><i class="fa fa-user-circle-o" aria-hidden="true"></i> &nbsp;Your TradeHive Account</h5>
               <a href="#" style={{textDecoration:"none",fontSize:"14px"}} className="mt-3   d-block">Your Profile</a>
               <a href="#" style={{textDecoration:"none",fontSize:"14px"}} className="mt-3 d-block">Account modification</a>
              <a href="#" style={{textDecoration:"none",fontSize:"14px"}} className="mt-3 d-block"> Client Master Report (CMR) and Depository<br/> Participant (DP)</a>

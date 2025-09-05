@@ -13,7 +13,7 @@ const Home = () => {
     useEffect(() => {
         const verifyCookie = async () => {
             if (!cookies.token) {
-                // Redirect to login if no token exists
+                
                 navigate("/login");
                 return;
             }
@@ -29,10 +29,10 @@ const Home = () => {
                 if (status) {
                     setUsername(user);
                     toast(`Hello, ${user}`, { position: "bottom-center" });
-                    // Navigate to /home after successful authentication
+                 
                  
                 } else {
-                    // If the status is false, remove the cookie and navigate to login
+
                     removeCookie("token");
                     navigate("/login");
                 }
